@@ -113,4 +113,7 @@ public class JobPost implements java.io.Serializable {
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "jobPost")
     private Set<JobPostActivity> jobPostActivities = new HashSet<>(0);
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "jobPost")
+    private Set<JobPostChangelog> jobPostChangelogs = new HashSet<>(0);
 }
